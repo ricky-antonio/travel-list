@@ -2,9 +2,9 @@ import "./Logo.css";
 
 function Logo() {
     return (
-        <div className="Logo">
-            <h2>Logo</h2>
-        </div>
+        <header className="Logo">
+            <h1>🏝️ Far Away 🧳</h1>
+        </header>
     );
 };
 
