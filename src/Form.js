@@ -3,9 +3,10 @@ import "./Form.css";
 import _uniqueId from "lodash/uniqueId";
 import _ from "lodash";
 
-function Form() {
+function Form({onAddItems}) {
     const [description, setDescription] = useState("");
     const [quantity, setQuantity] = useState(1);
+
     function handleSubmit(e) {        
         e.preventDefault();
         if (!description) return;
@@ -16,7 +17,9 @@ function Form() {
             packed: false,
             id: _uniqueId("item-"),
         };
-        console.log(newItem);
+        
+        onAddItems(newItem);
+
         setDescription("")
         setQuantity(1);
     }
