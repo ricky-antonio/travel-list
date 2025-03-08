@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./Form.css";
 import _uniqueId from "lodash/uniqueId";
-import _ from "lodash";
 
 function Form({onAddItems}) {
     const [description, setDescription] = useState("");
