@@ -5,8 +5,15 @@ function Stats({ items }) {
     const numPacked = items.filter((item) => item.packed).length;
     const percentage = Math.round((numPacked / numItems) * 100);
 
+    if (numItems === 0) return (
+        <footer className="Stats">
+            <p>Start adding items to your list!</p>
+        </footer>
+    );
+
     return (
         <footer className="Stats">
+            
             {percentage === 100 ? (
                 <p>✈️ You are all packed! Ready to go! ✈️</p>
             ) : (
