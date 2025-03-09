@@ -34,8 +34,12 @@ function App() {
         <div className="App">
             <Logo />
             <Form onAddItems={handleAddItems} />
-            <PackingList items={items} onRemoveItem={handleRemoveItem} onPackItem={handlePackItem}/>
-            <Stats />
+            <PackingList
+                items={items}
+                onRemoveItem={handleRemoveItem}
+                onPackItem={handlePackItem}
+            />
+            <Stats items={items} />
         </div>
     );
 }
