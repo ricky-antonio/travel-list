@@ -16,11 +16,11 @@ function App() {
 
     function handleAddItems(newItem) {
         setItems((items) => [...items, newItem]);
-    }
+    };
 
     function handleRemoveItem(id) {
         setItems((items) => items.filter((item) => item.id !== id));
-    }
+    };
 
     function handlePackItem(id) {
         setItems((items) =>
@@ -28,11 +28,12 @@ function App() {
                 item.id === id ? { ...item, packed: !item.packed } : item
             )
         );
-    }
+    };
 
     function handleClearList() {
-        setItems([])
-    }
+        const confirmed = window.confirm("Are you sure you want to clear the list?");
+        if (confirmed) setItems([]);
+    };
 
     return (
         <div className="App">
